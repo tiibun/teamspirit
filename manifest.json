@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "TeamSpirit Utility",
+    "version": "1.0",
+    "description": "TeamSpiritの勤務表の入力を手助けする",
+    "permissions": [],
+    "host_permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.vf.force.com/apex/AtkWorkTimeView*",
+                "https://*.vf.force.com/apex/AtkEmpJobView*"
+            ],
+            "js": [
+                "src/main.ts"
+            ],
+            "all_frames": true
+        }
+    ]
+}
