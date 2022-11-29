@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "TeamSpirit Utility",
     "version": "1.0",
-    "description": "TeamSpiritの勤務表の入力を手助けする",
+    "description": "TeamSpirit input helper",
     "icons": {
         "128": "images/icon128.png"
     },
