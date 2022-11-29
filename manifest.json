@@ -3,6 +3,9 @@
     "name": "TeamSpirit Utility",
     "version": "1.0",
     "description": "TeamSpiritの勤務表の入力を手助けする",
+    "icons": {
+        "128": "images/icon128.png"
+    },
     "permissions": [],
     "host_permissions": [],
     "content_scripts": [

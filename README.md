@@ -5,7 +5,7 @@
 - 勤務表の工数実績入力に"残"ボタン追加
 - 時間フォーカス時に入力しやすく（input type="time"使用）
 
-![工数実績入力](image/screen.png)
+![工数実績入力](screen.png)
 
 ## Build
 
