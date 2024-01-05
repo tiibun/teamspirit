@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "TeamSpirit Utility",
-    "version": "1.0",
+    "version": "1.1.0",
     "description": "TeamSpirit input helper",
     "icons": {
         "128": "images/icon128.png"
@@ -16,6 +16,15 @@
             ],
             "js": [
                 "src/main.ts"
+            ],
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "https://*.vf.force.com/apex/AtkWorkComponent*"
+            ],
+            "js": [
+                "src/remember_location.ts"
             ],
             "all_frames": true
         }
