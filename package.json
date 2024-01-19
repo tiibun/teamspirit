@@ -1,12 +1,12 @@
 {
   "name": "teamspirit-extension",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "TeamSpirit Utility",
   "scripts": {
     "lint": "eslint",
     "format": "eslint --fix && prettier -w **/*.ts",
     "test": "jest",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && node scripts/update-version.mjs",
     "start": "parcel watch manifest.json --config @parcel/config-webextension",
     "build": "parcel build manifest.json --config @parcel/config-webextension"
   },
