@@ -1,0 +1,34 @@
+name: Publish to Chrome WebStore
+
+on:
+  push:
+    tags:
+      - "v\d+.\d+.\d+"
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          npm run build
+
+      - name: Zip
+        uses: thedoctor0/zip-release@0.7.6
+        with:
+          type: zip
+          filename: release.zip
+          path: dist
+
+      - name: Upload to Chrome Web Store
+        uses: mnao305/chrome-extension-upload@v4.0.1
+        with:
+          file-path: release.zip
+          extension-id: golpdeihilbeojjlpfkpplelkijejpki
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}

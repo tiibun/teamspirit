@@ -1,24 +1,26 @@
 {
   "name": "teamspirit-extension",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "TeamSpirit Utility",
   "scripts": {
     "lint": "eslint",
     "format": "eslint --fix && prettier -w **/*.ts",
     "test": "jest",
     "prebuild": "rimraf dist",
-    "dev": "vite",
-    "build": "tsc && vite build"
+    "start": "parcel watch manifest.json --config @parcel/config-webextension",
+    "build": "parcel build manifest.json --config @parcel/config-webextension"
   },
   "license": "MIT",
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.21",
+    "@parcel/config-webextension": "^2.6.0",
     "@types/chrome": "^0.0.255",
     "@types/jest": "^29.5.1",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^9.1.0",
+    "parcel": "^2.6.0",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.0",
